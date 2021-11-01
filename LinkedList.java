@@ -47,6 +47,21 @@ public class LinkedList {
         }
         return temp;
     }
+    public Node popLast(){
+        Node node=head;
+        Node previous=null;
+        if (head == null) {
+            System.out.println("The list is empty");
+        } else {
+            while(!node.next.equals(tail)){
+                node=node.next;
+            }
+            node.next=null;
+            this.tail=node;
+        }
+        return node;
+    }
+
 }
 
 
