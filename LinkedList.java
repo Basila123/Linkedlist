@@ -1,5 +1,5 @@
 package com.bridgelabzAddress;
-import java.util.List;
+
 public class LinkedList {
     Node head;
     Node tail;
@@ -38,6 +38,7 @@ public class LinkedList {
             node = node.next;
         }
     }
+
     public Node pop() {
         Node temp = head;
         if (head == null) {
@@ -47,23 +48,39 @@ public class LinkedList {
         }
         return temp;
     }
-    public Node popLast(){
-        Node node=head;
-        Node previous=null;
+
+    public Node popLast() {
+        Node node = head;
+        Node previous = null;
         if (head == null) {
             System.out.println("The list is empty");
         } else {
-            while(!node.next.equals(tail)){
-                node=node.next;
+            while (!node.next.equals(tail)) {
+                node = node.next;
             }
-            node.next=null;
-            this.tail=node;
+            node.next = null;
+            this.tail = node;
         }
         return node;
     }
+    public int search(int key) {
+        Node node = head;
+        if (head == null) {
+            System.out.println("The list is empty");
+        } else {
+            head = head.next;
+            if (head.data == key) {
+                System.out.println("The value is present");
+
+            } else {
+                System.out.println("The value is not present");
+
+            }
+        }
+        return key;
+    }
 
 }
-
 
 
 
