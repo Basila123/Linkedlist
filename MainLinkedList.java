@@ -11,6 +11,10 @@ public class MainLinkedList {
         }
         System.out.println("The pushed data are:");
         n.traverse();
+        n.pop();
+        System.out.println("Poped elements are");
+        n.traverse();
         }
+
 }
 
